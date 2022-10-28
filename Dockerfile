@@ -1,14 +1,13 @@
-FROM python:3.8-slim
+FROM python:3.8
 
-COPY requirement.txt .
+COPY requirements.txt .
 
-RUN pip install -r requirement.txt
+RUN pip install -r requirements.txt 
 
-RUN mkdir -p app
+RUN mkdir -p app 
 
-COPY ./app app
+COPY ./app app 
 
-EXPOSE 80
+EXPOSE 80 
 
-CMD ["uvicorn", "app.main:app", "host", "0.0.0.0", "--port", "80"]
-
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
