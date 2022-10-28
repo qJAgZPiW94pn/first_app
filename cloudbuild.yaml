@@ -1,5 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/playground-s-11-1ed64f83/first_app', '.']
+  args: ['build', '-t', 'gcr.io/dulcet-timing-366905/first_app', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/playground-s-11-1ed64f83/first_app']
+  args: ['push', 'gcr.io/dulcet-timing-366905/first_app']
+
+  
